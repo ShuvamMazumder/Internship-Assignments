@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork 6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" class="css">
+    
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <form action="#">
+            <h1>Atom Information</h1>
+            <div class="row">
+                <div class="col-md-12 form-control">
+                    <select class="form-select" id="sAtom" aria-label="Default select example" onchange="sItem()">
+                        <option selected>Select Atom</option>
+                        <option value="1">Iron</option>
+                        <option value="2">Actinium</option>
+                        <option value="3"> Aluminum</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Iron-card -->
+            <div class="row" id="iron" style="display: none;">
+                <div class="col-md-6 form-control">
+                    <div class="card mb-3">
+                        <img src="https://www.thoughtco.com/thmb/yDtHFODURUQDMwpsfBP0jMRzVfQ=/1885x1414/smart/filters:no_upscale()/GettyImages-157526585-93425538070d4422ad42d22af28c0758.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Iron</h5>
+                            <p class="card-text">
+                                <b>Atomic number: </b> 26 <br>
+                                <b>Block</b> d <br>
+                                <b>Group</b> 8 <br>
+                                <b>Period</b> 4 <br>
+                                <b>Melting point</b> 1538°C, 2800°F, 1811 K <br>
+                                <b>Boiling point</b> 2861°C, 5182°F, 3134 K <br>
+                                <b>Appearance</b> A shiny, greyish metal that rusts in damp air. <br>
+                                <b></b>
+                                <b></b>
+                            </p>
+                            <p class="card-text"><small class="text-muted">Iron objects have been found in Egypt dating
+                                    from around 3500 BC. They contain about 7.5% nickel, which indicates that they were
+                                    of meteoric origin.
+
+                                    The ancient Hittites of Asia Minor, today’s Turkey, were the first to smelt iron
+                                    from its ores around 1500 BC and this new, stronger, metal gave them economic and
+                                    political power. The Iron Age had begun. Some kinds of iron were clearly superior to
+                                    others depending on its carbon content, although this was not appreciated. Some iron
+                                    ore contained vanadium producing so-called Damascene steel, ideal for swords.
+
+                                    The first person to explain the various types of iron was René Antoine Ferchault de
+                                    Réaumur who wrote a book on the subject in 1722. This explained how steel, wrought
+                                    iron, and cast iron, were to be distinguished by the amount of charcoal (carbon)
+                                    they contained. The Industrial Revolution which began that same century relied
+                                    extensively on this metal.</small></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- Actinium card -->
+            <div class="row" id="actinium" style="display: none;">
+                <div class="col-md-6 form-control">
+                    <div class="card mb-3">
+                        <img src="https://metals.comparenature.com/PImg/Actinium53Med_300.jpg" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Actinium</h5>
+                            <p class="card-text">
+                                <b>Atomic number: </b> 89 <br>
+                                <b>Block</b> d <br>
+                                <b>Group</b> Actinides <br>
+                                <b>Period</b> 7 <br>
+                                <b>Melting point</b> 1050°C, 1922°F, 1323 K <br>
+                                <b>Boiling point</b> 3200°C, 5792°F, 3473 K <br>
+                                <b>Appearance</b> Actinium is a soft, silvery-white radioactive metal. It glows blue in
+                                the dark because its intense radioactivity excites the air around it. <br>
+                                <b></b>
+                                <b></b>
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    This element was discovered in 1899 by André
+                                    Debierne at Paris. He extracted it from the uranium ore pitchblende (uranium oxide,
+                                    U3O8) in which it occurs in trace amounts. In 1902, Friedrich Otto Giesel
+                                    independently extracted it from the same mineral and, unaware it was already known,
+                                    gave it the named emanium.
+
+                                    Actinium extracted from uranium ores is the isotope actinium-227 which has half-life
+                                    of 21.7 years. It occurs naturally as one of the sequence of isotopes that originate
+                                    with the radioactive decay of uranium-235. A tonne of pitchblende contains around
+                                    150 mg of actinium.
+                                </small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Aluminum card  -->
+            <div class="row" id="aluminum" style="display: none;">
+                <div class="col-md-6 form-control">
+                    <div class="card mb-3">
+                        <img src="https://www.addressbazar.com/assets/images/category/105637.jpg" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Aluminum</h5>
+                            <p class="card-text">
+                                <b>Atomic number: </b> 26 <br>
+                                <b>Block</b> d <br>
+                                <b>Group</b> 8 <br>
+                                <b>Period</b> 4 <br>
+                                <b>Melting point</b> 1538°C, 2800°F, 1811 K <br>
+                                <b>Boiling point</b> 2861°C, 5182°F, 3134 K <br>
+                                <b>Appearance</b> A shiny, greyish metal that rusts in damp air. <br>
+                                <b></b>
+                                <b></b>
+                            </p>
+                            <p class="card-text"><small class="text-muted">The analysis of a curious metal ornament
+                                    found in the tomb of Chou-Chu, a military leader in 3rd century China, turned out to
+                                    be 85% aluminium. How it was produced remains a mystery. By the end of the 1700s,
+                                    aluminium oxide was known to contain a metal, but it defeated all attempts to
+                                    extract it. Humphry Davy had used electric current to extract sodium and potassium
+                                    from their so-called ‘earths’ (oxides), but his method did not release aluminium in
+                                    the same way. The first person to produce it was Hans Christian Oersted at
+                                    Copenhagen, Denmark, in 1825, and he did it by heating aluminium chloride with
+                                    potassium. Even so, his sample was impure. It fell to the German chemist Friedrich
+                                    Wöhler to perfect the method in 1827, and obtain pure aluminium for the first time
+                                    by using sodium instead of potassium.</small></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <h1>Arithmatic in form</h1>
+            <div class="row">
+                <h3>Addition</h3>
+                <div class="col-md-3">
+                    <input type="number" name="" id="num1" class="form-control" onblur="add()">
+                </div>
+
+                <div class="col-md-3">
+                    <input type="number" name="" id="num2" class="form-control" onblur="add()">
+                </div>
+                <div class="col-md-3">
+                    <input type="number" name="" id="addition" class="form-control" disabled>
+                </div>
+            </div>
+
+
+            
+        </form>
+    </div>
+
+
+
+
+
+    <script>
+        function sItem() {
+            let selectedItem = document.getElementById('sAtom').value;
+
+            if (selectedItem === '1') {
+                document.getElementById('iron').style.display = 'block';
+                document.getElementById('actinium').style.display = 'none';
+                document.getElementById('aluminum').style.display = 'none';
+            }
+            else if (selectedItem === '2') {
+                document.getElementById('iron').style.display = 'none';
+                document.getElementById('actinium').style.display = 'block';
+                document.getElementById('aluminum').style.display = 'none';
+            }
+
+            else if (selectedItem === '3') {
+                document.getElementById('iron').style.display = 'none';
+                document.getElementById('actinium').style.display = 'none';
+                document.getElementById('aluminum').style.display = 'block';
+            }
+
+        }
+
+        function add() {
+            // let num1= parseFloat(document.getElementById("num1").value);
+            // let num2= parseFloat(document.getElementById("num2").value);
+            let add = 0;
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+
+            if (num1 == "") {
+                num1 = 0;
+                // add = parseFloat(num1+num2);
+                add = parseFloat(num1) + parseFloat(num2);
+
+            }
+            else if (num2 == "") {
+                num2 = 0;
+                // add = parseFloat(num1+num2);
+                add = parseFloat(num1) + parseFloat(num2)
+            }
+            else {
+                // add = parseFloat(num1+num2);
+                add = parseFloat(num1) + parseFloat(num2)
+            }
+
+            // add = parseFloat(num1+num2);
+
+            document.getElementById('addition').value = add;
+
+
+        }
+
+    </script>
+
+
+  
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+</body>
+
+
+
+
+
+</html>

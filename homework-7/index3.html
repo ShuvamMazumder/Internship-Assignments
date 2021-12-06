@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 6.1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="panel panel-info">
+            <div class="panel-body" style="padding: 80px;">
+                <select class="form-select ajaxCall" id="selected-Item" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option id="op1" value="1"></option>
+                    <option id="op2" value="2"></option>
+                    <option id="op3" value="3"></option>
+                </select>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="box1 ">
+            <input type="text" class="form-control" id="text1" style="display: none;">
+        </div>
+        <div class="box2 ">
+            <input type="text" class="form-control" id="text2" style="display: none;">
+        </div>
+    </div>
+
+    <script>
+        function sItem() {
+            var sItem = document.getElementById('selected-Item').value;
+            console.log(sItem);
+        }
+    </script>
+
+    <script>
+        var text1 = document.getElementById('text1');
+        var text2 = document.getElementById('text2');
+        
+
+        $(document).ready(function () {
+
+            $(document).on('click', '.ajaxCall', function () {
+
+                $.ajax({
+                    url: 'https://mocki.io/v1/13f3de60-6793-497a-a311-9638f710a6a8',
+                    type: 'GET',
+                    dataType: 'json',
+                    header: {},
+                    data: {},
+                    success: function (reponse) {
+                        
+
+
+                        if (reponse.status == 200) {
+                            var data = JSON.parse(JSON.stringify(reponse.data));
+
+                            data.forEach(function (element) {
+                                
+                                if (element.id == 1) {
+                                    document.getElementById('op1').innerHTML = element.name;
+                                    
+                                }
+                                else if (element.id == 2) {
+                                    document.getElementById('op2').innerHTML = element.name;
+                                }
+                                else if (element.id == 3) {
+                                    document.getElementById('op3').innerHTML = element.name;
+                                }
+                            })
+
+                            
+
+                        }
+                    }
+                })
+
+
+            })
+
+            $(".ajaxCall").change(function () {
+                var sItem = document.getElementById('selected-Item').value;
+                if (sItem == 1) {
+                    text1.value = document.getElementById('op1').innerHTML;
+                    text1.style.display = 'block';
+                    text2.style.display = 'none';
+                }
+                else if (sItem == 2) {
+                    text2.value = document.getElementById('op2').innerHTML;
+                    text1.style.display = 'none';
+                    text2.style.display = 'block';
+                }
+                else if (sItem == 3) {
+                    text1.value = document.getElementById('op3').innerHTML;
+                    text2.value = document.getElementById('op3').innerHTML;
+                    text1.style.display = 'block';
+                    text2.style.display = 'block';
+                }
+
+            });
+
+
+
+
+        })
+    </script>
+    
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>HTML inpute type and attribute</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-md-offset-1">
+                <div class="alert alert-success">
+                    <h4 class="text-center">
+                        <b>Sample Form</b>
+                    </h4>
+                </div>
+
+                <form action="submit.html" method="POST" enctype="multipart/form-data">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h5>Form</h5>
+                        </div>
+
+
+                        <div class="panel-body">
+                            <div class="row">
+                                <!-- <div class="col-md-12 form-group"> -->
+                                <div class="col-md-6">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="age">Age</label>
+                                    <input type="email" name="age" id="age" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="password">Password</label>
+                                    <input type="email" name="password" id="password" class="form-control" required
+                                        maxlength="6" minlength="4">
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <label for="date">Date of Birth</label>
+                                    <input type="date" name="date" id="date" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="time">Select Time</label>
+                                    <input type="time" name="date" id="time" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="date">Date and Time</label>
+                                    <input type="datetime-local" name="datetime" id="dateTime" class="form-control"
+                                        required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="week">Week</label>
+                                    <input type="week" name="week" id="week" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="month">Month</label>
+                                    <input type="month" name="month" id="month" class="form-control" required>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <label for="url">Your website url</label>
+                                    <input type="url" name="url" id="url" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="color">Favourate Color</label>
+                                    <input type="color" name="color" id="color" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="range">Range</label>
+                                    <input type="range" name="range" id="range" class="form-control" required>
+                                </div>
+
+
+                                <div class="col-md-12">
+                                    <label for="about-yourself">About yourself</label>
+                                    <textarea name="about yourself" id="about-yourself" class="form-control" cols="30"
+                                        rows="10"></textarea>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="division">Division</label>
+                                    <select name="division" id="division" class="form-control">
+                                        <option value="0">Select Division</option>
+                                        <option value="0">Dhaka</option>
+                                        <option value="0">Chittagong</option>
+                                        <option value="0">Khulna</option>
+                                        <option value="0">Mymensing</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="gender">Gender</label>
+                                    <div class="form-control">
+                                        <label for="male" class="radio-inline">
+                                            <input type="radio" name="gender" id="male">Male
+                                        </label>
+
+                                        <label for="female" class="radio-inline">
+                                            <input type="radio" name="gender" id="female">Female
+                                        </label>
+                                        <label for="others" class="radio-inline">
+                                            <input type="radio" name="gender" id="others" class="radio-inline">Others
+                                        </label>
+
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <label for="gender">Skills</label>
+                                    <div class="form-control">
+                                        <label for="python" class="checkbox-inline">
+                                            <input type="checkbox" id="python">Python
+                                        </label>
+
+                                        <label for="java" class="checkbox-inline">
+                                            <input type="checkbox" id="java">Java
+                                        </label>
+                                        <label for="c++" class="checkbox-inline">
+                                            <input type="checkbox" id="c++" class="checkbox-inline">C++
+                                        </label>
+
+
+                                    </div>
+
+                                    
+                                    
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="cv">Upload CV</label>
+                                    <input type="file" name="file" id="cv" class="form-control">
+                                </div>
+                                <div class="col-md-6">
+                                    <div >
+                                        <label for="imageUpload">Image</label>
+                                    <input type="image"
+                                        src="https://appvital.com/images/profile/file-uploader-api-profile-avatar-2.jpg"
+                                        style="width: 50%; padding: 10px 15px;" class="form-control">
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+                                <!-- </div> -->
+                            </div>
+                        </div>
+
+
+                        <div class="panel-footer">
+                            <div class="form-control">
+                                <button class="btn btn-success pull-right " type="submit"
+                                    style="margin-right: 4px;">Submit</button>
+                                <button class="btn btn-danger pull-left " type="reset"
+                                    style="margin-right: 4px;">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
